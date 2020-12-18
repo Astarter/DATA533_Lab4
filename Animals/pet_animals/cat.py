@@ -4,8 +4,18 @@ from Animals.pet_animals.pet import Pet
 class Cat(Pet):
 
     def __init__(self, name, color):
-        self.name = name
-        self.color = color
+        try:
+            assert type(name) == str
+        except AssertionError:
+            print ("Cat's name should be in string format")
+        else:
+            self.name = name
+        try:
+            assert type(color) == str
+        except AssertionError:
+            print ("Cat's color should be in string format")
+        else:
+            self.color = color
         self.weight = 6.0 
 
     def sound(self):
