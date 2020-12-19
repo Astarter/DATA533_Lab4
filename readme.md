@@ -70,3 +70,5 @@ Method | Desription |
 
 ## passing build stamp
 [![Build Status](https://travis-ci.org/Astarter/DATA533_Lab4.svg?branch=master)](https://travis-ci.org/Astarter/DATA533_Lab4)
+
+## link to PyPi
