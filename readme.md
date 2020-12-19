@@ -72,3 +72,4 @@ Method | Desription |
 [![Build Status](https://travis-ci.org/Astarter/DATA533_Lab4.svg?branch=master)](https://travis-ci.org/Astarter/DATA533_Lab4)
 
 ## link to PyPi
+([link:](https://pypi.org/project/DATA533LAB4-Animals/0.1/))
