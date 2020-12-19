@@ -15,12 +15,20 @@ class Cow(Livestock):
         try:
             if not isinstance(owner, str):
                 raise TypeError("Owner must be a string")
+        except TypeError:
+            print("The owner input type is string")
+
+        try:
             if not isinstance(price, int):
                 raise TypeError("Price must be a integer")
+        except TypeError:
+            print("The price input type is integer")
+
+        try:
             if not isinstance(weight, int):
                 raise TypeError("Weight must be a integer")
         except TypeError:
-            print("The input type is incorrect")
+            print("The weight input type is integer")
 
         Livestock.__init__(self, owner)
         self.price = price
