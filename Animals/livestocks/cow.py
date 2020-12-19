@@ -1,4 +1,5 @@
 from Animals.livestocks.livestock import Livestock
+from Animals.userDefineException.myException1 import MyInputError
 
 
 class Cow(Livestock):
@@ -38,8 +39,13 @@ class Cow(Livestock):
         print("Mooooooooooo!!!")
 
     def eat(self, food_amount):
-        if food_amount < 0:
-            print("Incorrect amount of food.")
+
+        try:
+            if food_amount < 0:
+                raise MyInputError("food_amount can't be negative.")
+        except MyInputError as IE:
+            print("Exception raised:", IE.value)
+
         if food_amount > 1000:
             print("The max amount of food that a cow can eat at one time is 1000!")
             self.weight += (1000 / 100)

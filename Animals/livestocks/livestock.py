@@ -1,6 +1,5 @@
 class Livestock:
     def __init__(self, owner):
-
         try:
             if not isinstance(owner, str):
                 raise TypeError("Owner must be a string")

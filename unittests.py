@@ -10,7 +10,6 @@ This file will be used for creating test suits
 
 """
 
-
 def Animal_testsuite():
     suite = unittest.TestSuite()
     suite.addTest(unittest.makeSuite(test_livestock))
