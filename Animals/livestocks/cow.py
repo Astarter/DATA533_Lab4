@@ -19,13 +19,12 @@ class Cow(Livestock):
                 raise TypeError("Price must be a integer")
             if not isinstance(weight, int):
                 raise TypeError("Weight must be a integer")
-        except:
+        except TypeError:
+            print("The input type is incorrect")
 
-            Livestock.__init__(self, owner)
-            self.price = price
-            self.weight = weight
-
-
+        Livestock.__init__(self, owner)
+        self.price = price
+        self.weight = weight
 
     def makeSound(self):
         print("Mooooooooooo!!!")
