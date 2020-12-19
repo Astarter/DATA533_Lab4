@@ -12,10 +12,20 @@ class Cow(Livestock):
             the default weight for a cow is 100 kg.
             the default price for a  cow is 1000 dollars
         """
+        try:
+            if not isinstance(owner, str):
+                raise TypeError("Owner must be a string")
+            if not isinstance(price, int):
+                raise TypeError("Price must be a integer")
+            if not isinstance(weight, int):
+                raise TypeError("Weight must be a integer")
+        except:
 
-        Livestock.__init__(self, owner)
-        self.price = price
-        self.weight = weight
+            Livestock.__init__(self, owner)
+            self.price = price
+            self.weight = weight
+
+
 
     def makeSound(self):
         print("Mooooooooooo!!!")
