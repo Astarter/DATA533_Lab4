@@ -1,4 +1,4 @@
-from Animals.livestocks.cow import *
+from DATA533LAB4_Animals.livestocks.cow import *
 import unittest
 from unittest import mock
 import io

@@ -1,5 +1,5 @@
-from Animals.livestocks.cow import *
-from Animals.pet_animals.cat import *
+from DATA533LAB4_Animals.livestocks.cow import *
+from DATA533LAB4_Animals.pet_animals.cat import *
 
 # Test for subpackage 1:
 print("This is a test for subpackage1:")

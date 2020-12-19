@@ -1,4 +1,4 @@
-from Animals.pet_animals.cat import *
+from DATA533LAB4_Animals.pet_animals.cat import *
 import unittest
 from unittest import mock
 import io
