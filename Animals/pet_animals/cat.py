@@ -1,4 +1,5 @@
 from Animals.pet_animals.pet import Pet
+from Animals.userDefineException2.myException2 import feedError
 
 
 class Cat(Pet):
