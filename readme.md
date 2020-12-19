@@ -67,3 +67,6 @@ Method | Desription |
 **eat()**: | Give food for the cow to eat, 100units of food = 1 kg in weight. 
 **getWeight()**: | returns the cow’s weight.
 **display()**: | Returns cow information
+
+## passing build stamp
+[![Build Status](https://travis-ci.org/Astarter/DATA533_Lab4.svg?branch=master)](https://travis-ci.org/Astarter/DATA533_Lab4)
