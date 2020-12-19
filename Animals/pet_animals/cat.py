@@ -27,6 +27,13 @@ class Cat(Pet):
     def feed(self, cans=1.0):
         kg = cans * .1
         self.weight += kg
+        
+        try:
+            if cans < 0:
+                raise feedError("Cans should be a non-negative number")
+        except feedError as FE:
+            print("Exception raised: ", FE.value)
+        
         if self.weight > 6.0:
             print("{} is overweighted. You shouldn't have fed him that much. Check his weight!".format(self.name))
         else:
