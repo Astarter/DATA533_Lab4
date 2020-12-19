@@ -1,4 +1,5 @@
 from Animals.livestocks.livestock import Livestock
+from Animals.userDefineException.myException1 import MyInputError
 
 
 class Cow(Livestock):
@@ -12,6 +13,23 @@ class Cow(Livestock):
             the default weight for a cow is 100 kg.
             the default price for a  cow is 1000 dollars
         """
+        try:
+            if not isinstance(owner, str):
+                raise TypeError("Owner must be a string")
+        except TypeError:
+            print("The owner input type is string")
+
+        try:
+            if not isinstance(price, int):
+                raise TypeError("Price must be a integer")
+        except TypeError:
+            print("The price input type is integer")
+
+        try:
+            if not isinstance(weight, int):
+                raise TypeError("Weight must be a integer")
+        except TypeError:
+            print("The weight input type is integer")
 
         Livestock.__init__(self, owner)
         self.price = price
@@ -21,8 +39,13 @@ class Cow(Livestock):
         print("Mooooooooooo!!!")
 
     def eat(self, food_amount):
-        if food_amount < 0:
-            print("Incorrect amount of food.")
+
+        try:
+            if food_amount < 0:
+                raise MyInputError("food_amount can't be negative.")
+        except MyInputError as IE:
+            print("Exception raised:", IE.value)
+
         if food_amount > 1000:
             print("The max amount of food that a cow can eat at one time is 1000!")
             self.weight += (1000 / 100)

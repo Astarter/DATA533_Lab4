@@ -19,7 +19,7 @@ print("\n")
 # Test for subpackage 2:
 print("This is a test for subpackage1:")
 c1 = Livestock("ben")
-c2 = Cow("Tim", price=200, weight=10)
+c2 = Cow("Tim", price=1000, weight=100)
 
 print("Livestock c1:")
 c1.intoduce()
